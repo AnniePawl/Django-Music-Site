@@ -6,6 +6,6 @@ from .models import Musician
 # Home View
 def home(request):
     context = {
-        'music': Musician.objects.all()
+        'musicians': Musician.objects.all()
     }
     return render(request, 'music/home.html', context)
