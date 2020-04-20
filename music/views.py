@@ -9,3 +9,11 @@ def home(request):
         'musicians': Musician.objects.all()
     }
     return render(request, 'music/home.html', context)
+
+
+# Detail View
+def detail(request, musician_id):
+    context = {
+        'musician': Musician.objects.get(id=musician_id)
+    }
+    return render(request, 'music/detail.html', context)

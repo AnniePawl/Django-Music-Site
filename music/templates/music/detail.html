@@ -1,7 +1,13 @@
 <h1>Musician Details</h1>
-
+<h2>{{musician.name}}</h2>
 <ul>
   <li>
-    {{musician.name}}
+    Age: {{musician.age}}
   </li>
+  Albums:
+  <br />
+
+  {%for album in musician.albums.all%}
+  <li>{{album}}</li>
+  {%endfor%}
 </ul>
