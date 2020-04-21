@@ -1,9 +1,20 @@
-<h1>List of Musicians</h1>
+{% load static %}
 
-<ul>
-  {% for musician in musicians %}
-  <li>
-    <a href="/music/musician/{{ musician.id }}">{{ musician.name }}</a>
-  </li>
-  {% endfor %}
-</ul>
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="content_container">
+  <h1>List of Musicians</h1>
+
+  <ul>
+    {% for musician in musicians %}
+    <li>
+      <a href="/music/musician/{{ musician.id }}">{{ musician.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

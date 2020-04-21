@@ -1,6 +1,18 @@
-<h1>Song Details</h1>
-<h2>{{song.name}}</h2>
-<ul>
-  <li>Artist: {{song.artist}}</li>
-  <li>Album: {{song.album}}</li>
-</ul>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="content_container">
+  <h1>Song Details</h1>
+  <h3>{{song.name}}</h3>
+  <ul>
+    <li>Artist: {{song.artist}}</li>
+    <li>Album: {{song.album}}</li>
+    <!-- <li>Album: <a href="/music/album/{{album.id }}">{{song.album}}</a></li> -->
+  </ul>
+</div>

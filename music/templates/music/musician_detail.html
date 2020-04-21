@@ -1,15 +1,22 @@
-<h1>Musician Details</h1>
-<h2>{{musician.name}}</h2>
-<ul>
-  <li>
-    Age: {{musician.age}}
-  </li>
-  Albums:
-  <br />
+{% load static %}
 
-  {%for album in musician.album_set.all%}
-  <li>
-    <a href="/music/album/{{album.id }}">{{album}}</a>
-  </li>
-  {%endfor%}
-</ul>
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="content_container">
+  <h1>Musician Details</h1>
+  <h2>{{musician.name}}</h2>
+  <h3>Age: {{musician.age}}</h3>
+  <h3>ALBUMS</h3>
+  <ul>
+    {%for album in musician.album_set.all%}
+    <li>
+      <a href="/music/album/{{album.id }}">{{album}}</a>
+    </li>
+    {%endfor%}
+  </ul>
+</div>
