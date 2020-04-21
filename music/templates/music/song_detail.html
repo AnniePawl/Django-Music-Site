@@ -11,8 +11,13 @@
   <h1>Song Details</h1>
   <h3>{{song.name}}</h3>
   <ul>
-    <li>Artist: {{song.artist}}</li>
-    <li>Album: {{song.album}}</li>
+    <li>
+      <a href="/music/musician/{{ song.artist.id }}">{{song.artist}}</a>
+    </li>
+    <li>
+      <a href="/music/album/{{song.album.id }}">{{song.album}}</a>
+    </li>
+
     <!-- <li>Album: <a href="/music/album/{{album.id }}">{{song.album}}</a></li> -->
   </ul>
 </div>
