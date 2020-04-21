@@ -7,7 +7,9 @@
   Albums:
   <br />
 
-  {%for album in musician.albums.all%}
-  <li>{{album}}</li>
+  {%for album in musician.album_set.all%}
+  <li>
+    <a href="/music/album/{{album.id }}">{{album}}</a>
+  </li>
   {%endfor%}
 </ul>

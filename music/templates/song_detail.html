@@ -1,0 +1,10 @@
+<h1>Song Details</h1>
+<h2>{{musician.song_set}}</h2>
+<ul>
+  Songs:
+  <br />
+
+  {%for song in album.song_set.all%}
+  <li>{{song}}</li>
+  {%endfor%}
+</ul>
